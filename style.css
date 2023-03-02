@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/*game*/
+.container {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+
+	justify-content: flex-start;
+	align-items: center;
+
+	flex-direction: column;
+}
+
+#canvas {
+	border: 3px solid black;
+	margin: 40px;
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-start;
+	align-items: space-between;
+	flex-direction: column;
+	gap: 5px;
+}
+
+#start, #del, #pause {
+	width: 200px;
+	height: 40px;
+	border: none;
+	font-size: 17px;
+}
+
+/*main*/
+header {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	box-shadow: 0 calc(1em / 4) rgba(15, 169, 107, 0.638);
+}
+
+.header_item {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: calc(1em / 2) auto;
+}
+
+.header_item > a {
+	text-decoration: none;
+	color: black;
+	transition: all 0.5s;
+	font-size: larger;
+}
+.header_item > a:hover {
+	color: rgb(15, 169, 107);
+	transition: all 0.5s;
+	font-size: x-large;
+}
+
+.horizontal_section {
+	width: 90%;
+	margin: 3em auto;
+	display: flex;
+	justify-content: space-evenly;
+	gap: calc(1em/2);
+}
+
+.text_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.horizontal_section img {
+	width: 10em;
+	border-bottom-right-radius: 30px;
+	border-top-left-radius: 30px;
+	object-fit: contain;
+}
+
+.title {
+	text-align: center;
+	font-size: large;
+	text-decoration: wavy;
+	margin: calc(1em / 2);
+	font-weight: bold;
+}
+
+.text {
+	width: 90%;
+	text-align: justify;
+}
