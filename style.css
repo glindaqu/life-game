@@ -6,16 +6,21 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
+body {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 /*game*/
 .container {
 	display: flex;
-	width: 100vw;
-	height: 100vh;
-
+	width: 80%;
+	min-height: 100%;
 	justify-content: flex-start;
 	align-items: center;
-
 	flex-direction: column;
+	padding-bottom: 90px;
 }
 
 #canvas {
@@ -36,13 +41,23 @@
 	height: 40px;
 	border: none;
 	font-size: 17px;
+	transition: all 1s;
 }
+
+
+#start:hover, #del:hover, #pause:hover {
+	background-color: rgba(15, 169, 107, 0.638);
+	transition: all 1s;
+}
+
+
 
 /*main*/
 header {
 	width: 90%;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	justify-content: space-evenly;
 	box-shadow: 0 calc(1em / 4) rgba(15, 169, 107, 0.638);
 }
@@ -51,6 +66,10 @@ header {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: calc(1em / 2) auto;
+}
+
+.header_item > img {
+	width: 15em;
 }
 
 .header_item > a {
@@ -69,15 +88,9 @@ header {
 	width: 90%;
 	margin: 3em auto;
 	display: flex;
-	justify-content: space-evenly;
-	gap: calc(1em/2);
-}
-
-.text_container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: flex-start;
+	align-items: center;
+	gap: calc(1em/2);
 }
 
 .horizontal_section img {
@@ -87,15 +100,41 @@ header {
 	object-fit: contain;
 }
 
+.text_container {
+	font-size: 18px;
+	margin: 0 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 100%;
+}
+
 .title {
-	text-align: center;
+	display: flex;
+	align-self: flex-start;
+	text-align: left;
 	font-size: large;
 	text-decoration: wavy;
 	margin: calc(1em / 2);
-	font-weight: bold;
+	font-weight: bolder;
+	text-transform: uppercase;
+	margin: 1em 0;
 }
 
 .text {
 	width: 90%;
 	text-align: justify;
+	min-width: 100%;
+	line-height: 1.5em;
+}
+
+.rules {
+	line-height: 2em;
+	min-width: 100%;
+}
+
+.with_bg {
+	background: url("img/bg1.png");
+	background-attachment: fixed;
+	background-size: cover;
 }
